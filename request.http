@@ -1,0 +1,4 @@
+GET http://localhost:8092/api/etc?app_key=OTI0Y2YyYWU0MzI4
+#Accept: application/json
+
+###
