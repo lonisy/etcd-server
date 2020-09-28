@@ -5,13 +5,13 @@
 对外提供一个接口，返回对应 application 的配置数据。
 
 ## 接口 
-接口地址：/api/etc
-接口参数：app_key
-返回参数：body 为 base64编码的 AES 加密数据。
+接口地址：/api/etc   
+接口参数：app_key   
+返回参数：body 为 base64编码的 AES 加密数据。   
 
 ## 项目逻辑
-1、每个 application 可以包含多个 app_key, 每个 app_key 对应一个 16 位的秘钥。
-2、所有数据存在 redis 中。
+1、每个 application 可以包含多个 app_key, 每个 app_key 对应一个 16 位的秘钥。   
+2、所有数据存在 redis 中。   
 
 ## Redis 缓存配置
 
