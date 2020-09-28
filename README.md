@@ -23,11 +23,11 @@ date +%s |sha256sum |base64 |head -c 16;echo
 $ redis_password=123456
 
 # 创建新的 appkey 和对应的秘钥
-redis-cli -h 127.0.0.1 -p 6379 -a $redis_password hmset etc:app:app_key key value
+redis-cli -h 127.0.0.1 -p 6379 -a $redis_password hset etc:app:app_key key value
 
-redis-cli -h 127.0.0.1 -p 6379 -a $redis_password hmset etc:app:OTI0Y2YyYWU0MzI4 app_name "kar_engine"
-redis-cli -h 127.0.0.1 -p 6379 -a $redis_password hmset etc:app:OTI0Y2YyYWU0MzI4 app_key "OTI0Y2YyYWU0MzI4"
-redis-cli -h 127.0.0.1 -p 6379 -a $redis_password hmset etc:app:OTI0Y2YyYWU0MzI4 secret_key "MDFjOWEwMzU5NDAx"
+redis-cli -h 127.0.0.1 -p 6379 -a $redis_password hset etc:app:OTI0Y2YyYWU0MzI4 app_name "kar_engine"
+redis-cli -h 127.0.0.1 -p 6379 -a $redis_password hset etc:app:OTI0Y2YyYWU0MzI4 app_key "OTI0Y2YyYWU0MzI4"
+redis-cli -h 127.0.0.1 -p 6379 -a $redis_password hset etc:app:OTI0Y2YyYWU0MzI4 secret_key "MDFjOWEwMzU5NDAx"
 
 
 # 获取appkey list，hash 数据结构。KEY etc:category
@@ -36,7 +36,7 @@ redis-cli -h 127.0.0.1 -p 6379 -a $redis_password hgetall etc:kar_engine
 
 # 根据appkey设置配置
 redis-cli -h 127.0.0.1 -p 6379 -a $redis_password set etc:$app_key 'config_json_string'
-redis-cli -h 127.0.0.1 -p 6379 -a $redis_password set etc:OTI0Y2YyYWU0MzI4 'config_json_string'
+redis-cli -h 127.0.0.1 -p 6379 -a $redis_password set etc:NjIzOTlhMDNlN2Fk 'config_json_string'
 
 # 根据appkey获取配置
 redis-cli -h 127.0.0.1 -p 6379 -a $redis_password get etc:$app_key
