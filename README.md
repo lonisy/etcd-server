@@ -5,7 +5,7 @@
 对外提供一个接口，返回对应 application 的配置数据。
 
 ## 接口 
-接口地址：config.ai-shanghai.com/api/etc
+接口地址：/api/etc
 接口参数：app_key
 返回参数：body 为 base64编码的 AES 加密数据。
 
